@@ -1,4 +1,3 @@
-# Create a resource group if it doesn't exist.
 resource "azurerm_resource_group" "myterraformgroup" {
     name    = "terraform-rg2"
     location = "eastus"
@@ -137,7 +136,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
         disable_password_authentication = false
         }
     }
-
+/* 
     boot_diagnostics {
         enabled = "true"
         storage_uri = "${azurerm_storage_account.mystorageaccount.primary_blob_endpoint}"
@@ -146,4 +145,4 @@ resource "azurerm_virtual_machine" "myterraformvm" {
     tags {
         environment = "Terraform Demo"
     }
-}
+} */
