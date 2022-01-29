@@ -1,16 +1,4 @@
 provider "azurerm" {
-  alias           = "stage1"
-  subscription_id = "yyy"
-  tenant_id       = "xxx"
-
-  features {}
-}
-
-provider "azurerm" {
-  alias           = "prod1"
-  subscription_id = "yyy"
-  tenant_id       = "xxx"
-
   features {}
 }
 
