@@ -1,10 +1,9 @@
 resource "azurerm_resource_group" "myterraformgroup" {
     name    = "terraform-rg2"
     location = "eastus"
-
-    tags {
+/*     tags {
         environment = "Terraform Demo"
-    }
+    } */
 }
 
 # Create virtual network
