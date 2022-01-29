@@ -1,3 +1,19 @@
+provider "azurerm" {
+  alias           = "stage1"
+  subscription_id = "yyy"
+  tenant_id       = "xxx"
+
+  features {}
+}
+
+provider "azurerm" {
+  alias           = "prod1"
+  subscription_id = "yyy"
+  tenant_id       = "xxx"
+
+  features {}
+}
+
 resource "azurerm_resource_group" "myterraformgroup" {
     name    = "terraform-rg2"
     location = "eastus"
