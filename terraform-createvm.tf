@@ -30,8 +30,8 @@ resource "azurerm_subnet" "myterraformsubnet" {
 resource "azurerm_public_ip" "myterraformpublicip" {
     name                        = "myPublicIP"
     location                    = "eastus"
-    resource_group_name          = "${azurerm_resource_group.myterraformgroup.name}"
-    public_ip_address_allocation = "dynamic"
+    resource_group_name         = "${azurerm_resource_group.myterraformgroup.name}"
+    allocation_method           = "Dynamic"
 
 /*     tags {
         environment = "Terraform Demo"
@@ -66,7 +66,6 @@ resource "azurerm_network_interface" "myterraformnic" {
     name                      = "myNIC"
     location                  = "eastus"
     resource_group_name      = "${azurerm_resource_group.myterraformgroup.name}"
-    network_security_group_id = "${azurerm_network_security_group.myterraformnsg.id}"
 
     ip_configuration {
         name                          = "myNicConfiguration"
