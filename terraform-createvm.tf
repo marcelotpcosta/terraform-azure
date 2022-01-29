@@ -13,9 +13,9 @@ resource "azurerm_virtual_network" "myterraformnetwork" {
     location            = "eastus"
     resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
 
-    tags {
+/*     tags {
         environment = "Terraform Demo"
-    }
+    } */
 }
 
 # Create subnet
@@ -33,9 +33,9 @@ resource "azurerm_public_ip" "myterraformpublicip" {
     resource_group_name          = "${azurerm_resource_group.myterraformgroup.name}"
     public_ip_address_allocation = "dynamic"
 
-    tags {
+/*     tags {
         environment = "Terraform Demo"
-    }
+    } */
 }
 
 # Create Network Security Group and rule
@@ -56,9 +56,9 @@ resource "azurerm_network_security_group" "myterraformnsg" {
         destination_address_prefix = "*"
     }
 
-    tags {
+/*     tags {
         environment = "Terraform Demo"
-    }
+    } */
 }
 
 # Create network interface
@@ -75,9 +75,9 @@ resource "azurerm_network_interface" "myterraformnic" {
         public_ip_address_id          = "${azurerm_public_ip.myterraformpublicip.id}"
     }
 
-    tags {
+ /*    tags {
         environment = "Terraform Demo"
-    }
+    } */
 }
 
 # Generate random text for a unique storage account name
@@ -98,9 +98,9 @@ resource "azurerm_storage_account" "mystorageaccount" {
     account_tier                = "Standard"
     account_replication_type    = "LRS"
 
-    tags {
+/*     tags {
         environment = "Terraform Demo"
-    }
+    } */
 }
 
 # Create virtual machine
